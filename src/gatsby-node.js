@@ -89,7 +89,7 @@ title: >-
 date: ${post.published}
 slug: ${segments[1]}
 featuredImageUrl: ${post.images ? post.images[0].url : null}
-tags: ['javascript', 'hooks', 'featured']
+tags: ${post.labels ? post.labels : []}
 ---
 
 ${md}`,
@@ -150,7 +150,7 @@ ${md}`,
     ${page.title}
   date: ${page.published}
   slug: ${segments[1]}
-  tags: ['javascript', 'hooks', 'featured']
+  tags: ${post.labels ? post.labels : []}
   ---
 
   ${md}`,
